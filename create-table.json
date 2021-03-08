@@ -1,0 +1,16 @@
+{
+    "TableName": "Expenses",
+    "KeySchema": [
+      { "AttributeName": "Location", "KeyType": "HASH" },
+      { "AttributeName": "Mileage", "KeyType": "RANGE" }
+    ],
+    "AttributeDefinitions": [
+      { "AttributeName": "Location", "AttributeType": "S" },
+      { "AttributeName": "Mileage", "AttributeType": "N" },
+      { "AttributeName": "Date", "AttributeType": "S" }
+    ],
+    "ProvisionedThroughput": {
+      "ReadCapacityUnits": 5,
+      "WriteCapacityUnits": 5
+    }
+}
